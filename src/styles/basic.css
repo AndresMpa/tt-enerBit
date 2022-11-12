@@ -17,6 +17,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .input {
   margin: 5px;
   padding: 12px;
@@ -30,7 +35,7 @@ body {
 }
 
 .box {
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 5px;
 }
 
