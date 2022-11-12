@@ -1,25 +1,36 @@
-import logo from '../assets/logos/logo.svg';
-import '../styles/App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+//import useInitialState from "../hooks/useInitialState.jsx";
+
+import AppContext from "../context/AppContext.jsx";
+import RequireAuth from "../context/RequireAuth.jsx";
+
+import Layout from "../containers/Layout.jsx";
+
+import Inventory from "../pages/Inventory.jsx";
+import NotFound from "../pages/NotFound.jsx";
+import Login from "../pages/Login.jsx";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={AppContext}>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route
+            path="/inventory"
+            element={
+              <RequireAuth>
+                <Inventory />
+              </RequireAuth>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </AppContext.Provider>
   );
-}
+};
 
 export default App;
