@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 
-import config from "../config.json"
+import config from "../config.json";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,34 +17,46 @@ const Login = () => {
       password: formData.get("password"),
     };
 
-    if (data.username === config.USERNAME && data.password === config.PASSWORD) {
-      localStorage.setItem("auth", data)
+    if (
+      data.username === config.USERNAME &&
+      data.password === config.PASSWORD
+    ) {
+      localStorage.setItem("auth", data);
       navigate("/inventory");
-    }else {
+    } else {
       Swal.fire({
-        title: 'Ups...',
-        text: 'Those credentials are not registered',
-        icon: 'error',
-        confirmButtonText: 'Okay'
-      })
+        title: "Ups...",
+        text: "Those credentials are not registered",
+        icon: "error",
+        confirmButtonText: "Okay",
+      });
     }
   };
   return (
-    <div className="box">
-      <form action="/" className="box" ref={form} onSubmit={handleSubmit}>
+    <div className="login">
+      <div className="login--container">
+        <h2>Login</h2>
+      </div>
+
+      <form
+        action="/"
+        className="box login--container login--form"
+        ref={form}
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           name="username"
-          className="input"
+          className="input login--input"
           placeholder="Username"
         />
         <input
           type="password"
           name="password"
-          className="input"
+          className="input login--input"
           placeholder="Password"
         />
-        <button className="button" onClick={handleSubmit}>
+        <button className="button login--button" onClick={handleSubmit}>
           Login
         </button>
       </form>
