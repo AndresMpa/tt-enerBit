@@ -1,0 +1,40 @@
+.login {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  color: #ffffff;
+
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+}
+
+.login--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login--form {
+  padding: 50px 0px;
+  background-color: #ed7004;
+}
+
+.login--input {
+  width: 65%;
+  margin: 10px auto;
+  border-radius: 0px;
+  border-left: 6px solid #53358e;
+}
+
+.login--button {
+  width: 62.5%;
+  margin: auto;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.login--button:hover {
+  background: #fffcfc;
+}
