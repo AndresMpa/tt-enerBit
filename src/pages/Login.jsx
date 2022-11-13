@@ -21,7 +21,7 @@ const Login = () => {
       data.username === config.USERNAME &&
       data.password === config.PASSWORD
     ) {
-      localStorage.setItem("auth", data);
+      localStorage.setItem("auth", JSON.stringify(data.username));
       navigate("/inventory");
     } else {
       Swal.fire({
