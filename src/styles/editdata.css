@@ -1,0 +1,53 @@
+.editData {
+  justify-content: space-around;
+}
+
+.editData--container {
+  padding: 5px;
+}
+
+.editData--container div p {
+  margin: 0px;
+}
+
+.editData--option {
+  justify-content: center;
+}
+
+.editData--option__cancel,
+.editData--option__keep {
+  margin: auto 25px;
+  max-width: 200px;
+  width: 100%;
+
+  background: none;
+  cursor: pointer;
+  padding: 24px;
+
+  color: #ffffff;
+}
+
+.editData--option__cancel {
+  background-color: #ed7004;
+}
+
+.editData--option__keep {
+  background-color: #53358e;
+}
+
+.editData--option__cancel:hover {
+  background-color: #f79009;
+}
+
+.editData--option__keep:hover {
+  background-color: #8b78b0;
+}
+
+@media (max-width: 600px) {
+  .editData {
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    max-height: 70vh;
+  }
+}
