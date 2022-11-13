@@ -1,0 +1,57 @@
+.deleteData {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteData--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60%;
+  margin: 64px auto;
+
+  color: #ffffff;
+
+  background-color: #ed7004;
+}
+
+.deleteData--container__message {
+  padding: 16px;
+}
+
+.deleteData--container__message span {
+  background-color: #53358e;
+}
+
+.deleteData--option {
+  margin: auto;
+}
+
+.deleteData--option__cancel,
+.deleteData--option__delete {
+  margin: auto 25px;
+  width: 100%;
+
+  background: none;
+  cursor: pointer;
+  padding: 24px;
+
+  color: #ffffff;
+}
+
+.deleteData--option__cancel {
+  background-color: #ed7004;
+}
+
+.deleteData--option__delete {
+  background-color: #53358e;
+}
+
+.deleteData--option__cancel:hover {
+  background-color: #f79009;
+}
+
+.deleteData--option__delete:hover {
+  background-color: #8b78b0;
+}
