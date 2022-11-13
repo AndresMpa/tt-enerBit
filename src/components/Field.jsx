@@ -40,7 +40,7 @@ const Field = ({ item }) => {
     setpopupData({
       title: "You are going to remove item ",
       target: `${item.serial}`,
-      content: <DeleteData data={item} />,
+      content: <DeleteData data={item} handler={togglePopup} />,
     });
     togglePopup();
   };

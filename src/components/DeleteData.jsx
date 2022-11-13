@@ -1,6 +1,35 @@
 import React from "react";
 
-const DeleteData = ({ data }) => {
+import config from "../config.json";
+import Swal from "sweetalert2";
+import axios from "axios";
+
+const DeleteData = ({ data, handler }) => {
+  const handleCloseClick = () => {
+    handler();
+  };
+  const handleDeleteClick = () => {
+    axios
+      .delete(`${config.API}/${data.id}`)
+      .then((response) => {
+        if (response.status === 200) {
+          Swal.fire({
+            title: "Eliminated",
+            icon: "info",
+            text: `Register ${data.serial} have been removed successfully`,
+            confirmButtonText: "Okay",
+          });
+        }
+      })
+      .catch(() => {
+        Swal.fire({
+          title: "Ups...",
+          icon: "error",
+          text: `Something went wrong, register is still there`,
+          confirmButtonText: "Okay",
+        });
+      });
+  };
   return (
     <section className="row deleteData">
       <article className="deleteData--container">
@@ -10,8 +39,18 @@ const DeleteData = ({ data }) => {
         </h2>
       </article>
       <article className="row deleteData--option">
-        <button className="box button deleteData--option__delete">Delete</button>
-        <button className="box button deleteData--option__cancel">Cancel</button>
+        <button
+          className="box button deleteData--option__delete"
+          onClick={handleDeleteClick}
+        >
+          Delete
+        </button>
+        <button
+          className="box button deleteData--option__cancel"
+          onClick={handleCloseClick}
+        >
+          Cancel
+        </button>
       </article>
     </section>
   );

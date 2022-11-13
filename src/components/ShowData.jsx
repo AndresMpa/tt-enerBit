@@ -11,7 +11,7 @@ const ShowData = ({ data }) => {
               type="text"
               className="input"
               value={data.connection_type}
-              readonly
+              readOnly
             />
           </p>
         </div>
@@ -22,7 +22,7 @@ const ShowData = ({ data }) => {
               type="text"
               className="input"
               value={data.storage_system}
-              readonly
+              readOnly
             />
           </p>
         </div>
@@ -33,20 +33,20 @@ const ShowData = ({ data }) => {
               type="text"
               className="input"
               value={data.condition}
-              readonly
+              readOnly
             />
           </p>
         </div>
         <div>
           <p>
             Owner:
-            <input className="input" type="text" value={data.owner} readonly />
+            <input className="input" type="text" value={data.owner} readOnly />
           </p>
         </div>
         <div>
           <p>
             Serial:
-            <input className="input" type="text" value={data.serial} readonly />
+            <input className="input" type="text" value={data.serial} readOnly />
           </p>
         </div>
         <div>
@@ -56,7 +56,7 @@ const ShowData = ({ data }) => {
               className="input"
               type="text"
               value={data.location}
-              readonly
+              readOnly
             />
           </p>
         </div>
@@ -69,26 +69,26 @@ const ShowData = ({ data }) => {
               className="input"
               type="text"
               value={data.purchase}
-              readonly
+              readOnly
             />
           </p>
         </div>
         <div>
           <p>
             i_max:
-            <input className="input" type="text" value={data.i_max} readonly />
+            <input className="input" type="text" value={data.i_max} readOnly />
           </p>
         </div>
         <div>
           <p>
             i_b:
-            <input className="input" type="text" value={data.i_b} readonly />
+            <input className="input" type="text" value={data.i_b} readOnly />
           </p>
         </div>
         <div>
           <p>
             i_n:
-            <input className="input" type="text" value={data.i_n} readonly />
+            <input className="input" type="text" value={data.i_n} readOnly />
           </p>
         </div>
         <div>
@@ -98,14 +98,14 @@ const ShowData = ({ data }) => {
               className="input"
               type="text"
               value={data.manufacturer}
-              readonly
+              readOnly
             />
           </p>
         </div>
         <div>
           <p>
             Seals:
-            <input className="input" type="text" value={data.seals} readonly />
+            <input className="input" type="text" value={data.seals} readOnly />
           </p>
         </div>
       </article>
