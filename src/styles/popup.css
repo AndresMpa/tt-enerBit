@@ -1,0 +1,35 @@
+.popup {
+  flex-direction: column;
+  display: flex;
+  height: 95%;
+  width: 95%;
+
+  top: 2.5%;
+  left: 2.5%;
+  z-index: 1;
+  position: absolute;
+}
+
+.popup--header {
+  background-color: #ed7004;
+  color: #53358e;
+}
+
+.popup--content {
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.popup--header__title {
+  margin: 8px 25px;
+}
+
+.popup--header__title span {
+  text-decoration: underline #ffffff;
+  text-decoration-thickness: 8px;
+  color: #ffffff;
+}
+
+.popup--header__icon {
+  margin-left: auto;
+}

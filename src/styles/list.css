@@ -2,7 +2,13 @@
   width: 95%;
   height: auto;
   max-height: 75vh;
+  overflow-y: auto;
   margin: 16px auto;
-  overflow-y: scroll;
   background-color: #ffffff;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
 }

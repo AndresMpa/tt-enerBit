@@ -2,6 +2,7 @@
 
 @import "add.css";
 @import "list.css";
+@import "popup.css";
 @import "login.css";
 @import "field.css";
 @import "logout.css";
@@ -9,3 +10,4 @@
 @import "option.css";
 @import "search.css";
 @import "loading.css";
+@import "showdata.css";
