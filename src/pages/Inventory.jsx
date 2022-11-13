@@ -10,14 +10,13 @@ import Loading from "../components/Loading";
 
 const Inventory = () => {
   const list = useGetData("");
-  console.log(list);
   return (
     <>
       <Navbar>
         <Logout />
       </Navbar>
       <Option />
-      {!list ? <Loading /> : <List itemList={list.items} />}
+      {list.length <= 0 ? <Loading /> : <List itemList={list} />}
     </>
   );
 };

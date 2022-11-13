@@ -5,12 +5,13 @@ import config from "../config.json";
 import Swal from "sweetalert2";
 
 const useGetData = (endpoint) => {
+  let point = endpoint ?? ""
   const [target, setTarget] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       axios
-        .get(`${config.API}${endpoint}`)
+        .get(`${config.API}${point}`)
         .then((response) => {
           setTarget(response.data);
         })
@@ -28,7 +29,7 @@ const useGetData = (endpoint) => {
     getData();
   }, []);
 
-  return target
+  return target;
   let data = {
     items: [
       {
