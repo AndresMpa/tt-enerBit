@@ -5,10 +5,10 @@ import config from "../config.json";
 import Swal from "sweetalert2";
 
 const useGetData = (endpoint) => {
-  let point = endpoint ?? ""
   const [target, setTarget] = useState([]);
 
   useEffect(() => {
+    let point = endpoint ?? "";
     const getData = async () => {
       axios
         .get(`${config.API}${point}`)
@@ -16,7 +16,6 @@ const useGetData = (endpoint) => {
           setTarget(response.data);
         })
         .catch((error) => {
-          console.log(error);
           Swal.fire({
             title: "Ups...",
             icon: "error",
@@ -27,7 +26,7 @@ const useGetData = (endpoint) => {
     };
 
     getData();
-  }, []);
+  });
 
   return target;
 };
