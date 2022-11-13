@@ -1,0 +1,20 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  margin: auto;
+
+  background-color: #ffffff;
+}
+.notfound--logo {
+  height: 30vh;
+}
+.notfound--sentence {
+  margin: auto;
+
+  padding: 8px;
+}
