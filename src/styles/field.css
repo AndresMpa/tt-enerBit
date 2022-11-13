@@ -7,9 +7,14 @@
 }
 
 .field--item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field--item:hover {
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .field--item__description {
@@ -21,10 +26,6 @@
   display: block;
   padding: 0%;
   margin: 0% 5px;
-  height: 30px;
-}
-
-.field--item__icon {
   height: 30px;
 }
 
@@ -42,6 +43,11 @@
 
   border-radius: 50%;
   background-color: #8b78b0;
+}
+
+.field--option__button:hover {
+  background-color: #ed7004;
+  cursor: pointer;
 }
 
 .field--option__icon {

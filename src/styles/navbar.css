@@ -1,5 +1,6 @@
 .navbar {
     height: 5vh;
+    min-height: 30px;
 
     padding: 8px;
     background-color: #ffffff;

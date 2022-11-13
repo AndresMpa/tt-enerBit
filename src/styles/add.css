@@ -1,0 +1,21 @@
+.add {
+  margin: 0% 15px;
+  padding: 0% 2.5%;
+  border-radius: 12px;
+  background: #ed7004;
+}
+
+.add:hover {
+  background: #f79009;
+  cursor: pointer;
+}
+
+.add--container {
+  padding: 0%;
+  margin: auto 0%;
+}
+
+.add--container__icon {
+  height: 15px;
+  width: 15px;
+}

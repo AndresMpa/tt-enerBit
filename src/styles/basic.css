@@ -43,3 +43,12 @@ body {
   padding: 12px;
   font-weight: bolder;
 }
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

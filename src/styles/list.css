@@ -1,5 +1,8 @@
 .list {
-    width: 95%;
-    margin: 64px auto;
-    background-color: #ffffff;
+  width: 95%;
+  height: auto;
+  max-height: 75vh;
+  margin: 16px auto;
+  overflow-y: scroll;
+  background-color: #ffffff;
 }

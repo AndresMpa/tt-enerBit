@@ -1,0 +1,19 @@
+.search {
+  margin: 0%;
+  padding: 0px 5px;
+  background-color: #ffffff;
+}
+
+.search--input {
+  padding: 8px;
+}
+
+.search--fig {
+  padding: 0px;
+  margin: auto 0px;
+}
+
+.search--fig__icon {
+  height: 15px;
+  width: 15px;
+}
