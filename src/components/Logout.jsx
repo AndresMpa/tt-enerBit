@@ -6,7 +6,6 @@ import logout from "../assets/icons/logout.svg";
 const Logout = () => {
   const navigate = useNavigate();
   const handleLogoutClick = () => {
-    console.log("Evento");
     localStorage.removeItem("auth");
     navigate("/");
   };

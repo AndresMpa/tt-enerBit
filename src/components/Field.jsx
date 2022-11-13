@@ -1,19 +1,48 @@
 import React from "react";
+import { useState } from "react";
 
-import newIcon from "../assets/icons/new.svg";
 import edit from "../assets/icons/edit.svg";
 import trash from "../assets/icons/trash.svg";
+import newIcon from "../assets/icons/new.svg";
+
+import PopUp from "../containers/PopUp";
+import ShowData from "./ShowData";
 
 const Field = ({ item }) => {
+  const [popupData, setpopupData] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   const openItemInformation = (item) => {
-    console.log(item);
+    setpopupData({
+      title: "Description for item ",
+      target: `${item.serial}`,
+      content: <ShowData data={item} />,
+    });
+    togglePopup();
   };
+
   const openItemToEdit = (item) => {
-    console.log(item);
+    setpopupData({
+      title: "Editing item ",
+      target: `${item.serial}`,
+      content: item,
+    });
+    togglePopup();
   };
+
   const openItemToDelete = (item) => {
-    console.log(item);
+    setpopupData({
+      title: "You are going to remove item ",
+      target: `${item.serial}`,
+      content: item,
+    });
+    togglePopup();
   };
+
   return (
     <>
       <article className="row field">
@@ -23,12 +52,7 @@ const Field = ({ item }) => {
         >
           {item.condition === "nuevo" && (
             <figure className="field--item__status">
-              <img
-                alt="New"
-                src={newIcon}
-                srcSet={newIcon}
-                className="icon"
-              />
+              <img alt="New" src={newIcon} srcSet={newIcon} className="icon" />
             </figure>
           )}
           <span className="field--item__description">{item.serial}</span>
@@ -59,6 +83,8 @@ const Field = ({ item }) => {
           </figure>
         </div>
       </article>
+
+      {isOpen && <PopUp popupData={popupData} handler={togglePopup} />}
     </>
   );
 };
