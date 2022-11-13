@@ -4,10 +4,10 @@ import logo from "../assets/logos/logo.svg";
 
 const NotFound = () => {
   return (
-    <div>
-      <img src={logo} alt="Logo" srcSet={logo} />
-      <p>No encontrado, error 404.</p>
-    </div>
+    <article className="notfound">
+      <img src={logo} alt="Logo" srcSet={logo} className="notfound--logo" />
+      <p className="notfound--sentence">No encontrado, error 404.</p>
+    </article>
   );
 };
 

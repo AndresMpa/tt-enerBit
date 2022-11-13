@@ -6,11 +6,7 @@ const RequireAuth = ({ children }) => {
   let location = useLocation();
 
   if (auth) {
-    if (location.pathname === "/" && auth.username === "admin") {
-      return <Navigate to="/inventory" state={{ from: location }} replace />;
-    } else {
-      return children;
-    }
+    return children
   } else {
     return <Navigate to="/" state={{ from: location }} replace />;
   }

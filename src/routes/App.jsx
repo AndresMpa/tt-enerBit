@@ -9,6 +9,7 @@ import Layout from "../containers/Layout.jsx";
 import Inventory from "../pages/Inventory.jsx";
 import NotFound from "../pages/NotFound.jsx";
 import Login from "../pages/Login.jsx";
+import AutoLogin from "../context/AutoLogin.jsx";
 
 const App = () => {
   return (
@@ -18,9 +19,9 @@ const App = () => {
           <Route
             path="/"
             element={
-              <RequireAuth>
+              <AutoLogin>
                 <Login />
-              </RequireAuth>
+              </AutoLogin>
             }
           />
           <Route

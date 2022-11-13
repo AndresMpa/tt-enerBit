@@ -1,6 +1,6 @@
 {
     "ENV": "deploy",
-    "BASE_URL": "https://andresmpa.github.io/tt-enerBit/",
+    "BASE_URL": "localhost:3000",
     "API": "https://ops.enerbit.dev/learning/api/v1/meters",
     "USERNAME": "admin",
     "PASSWORD": "admin"
