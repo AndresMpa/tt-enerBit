@@ -12,8 +12,7 @@ const DeleteData = ({ data, handler }) => {
     axios
       .delete(`${config.API}/${data.id}`)
       .then((response) => {
-        console.log(response.status);
-        if (response.status / 100 === 2) {
+        if (response.data) {
           Swal.fire({
             title: "Eliminated",
             icon: "info",

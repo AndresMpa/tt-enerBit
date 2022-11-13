@@ -32,12 +32,20 @@ const EditData = ({ data, handler }) => {
     let response;
 
     if (data.id) {
-      response = await axios.patch(`${config.API}/${data.id}`, requestData);
+      response = await axios
+        .patch(`${config.API}/${data.id}`, requestData)
+        .catch((error) => {
+          return error;
+        });
     } else {
-      response = await axios.post(`${config.API}`, requestData);
+      response = await axios
+        .post(`${config.API}`, requestData)
+        .catch((error) => {
+          return error;
+        });
     }
 
-    if (response.status / 100 === 2) {
+    if (Math.floor(response.status / 100) === 2) {
       Swal.fire({
         title: "Saved",
         icon: "info",
@@ -46,9 +54,9 @@ const EditData = ({ data, handler }) => {
       });
     } else {
       Swal.fire({
-        title: "Ups...",
+        title: `Ups... ${response.response.data.detail[0].loc[1]}`,
         icon: "error",
-        text: `Something went wrong updating registers, try again later`,
+        text: `It seems that ${response.response.data.detail[0].msg}`,
         confirmButtonText: "Okay",
       });
     }
