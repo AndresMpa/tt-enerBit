@@ -2,9 +2,11 @@
   "name": "fancy-crud",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://andresmpa.github.io/tt-enerBit/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,5 +40,8 @@
     "react-scripts": "5.0.1",
     "sweetalert2": "^11.6.8",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
