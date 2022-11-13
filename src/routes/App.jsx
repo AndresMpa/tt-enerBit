@@ -1,8 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-//import useInitialState from "../hooks/useInitialState.jsx";
-
 import AppContext from "../context/AppContext.jsx";
 import RequireAuth from "../context/RequireAuth.jsx";
 
@@ -17,7 +15,14 @@ const App = () => {
     <AppContext.Provider value={AppContext}>
       <Layout>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              <RequireAuth>
+                <Login />
+              </RequireAuth>
+            }
+          />
           <Route
             path="/inventory"
             element={
