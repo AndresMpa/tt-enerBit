@@ -6,6 +6,8 @@ import trash from "../assets/icons/trash.svg";
 import newIcon from "../assets/icons/new.svg";
 
 import PopUp from "../containers/PopUp";
+import DeleteData from "./DeleteData";
+import EditData from "./EditData";
 import ShowData from "./ShowData";
 
 const Field = ({ item }) => {
@@ -29,7 +31,7 @@ const Field = ({ item }) => {
     setpopupData({
       title: "Editing item ",
       target: `${item.serial}`,
-      content: item,
+      content: <EditData data={item} />,
     });
     togglePopup();
   };
@@ -38,7 +40,7 @@ const Field = ({ item }) => {
     setpopupData({
       title: "You are going to remove item ",
       target: `${item.serial}`,
-      content: item,
+      content: <DeleteData data={item} />,
     });
     togglePopup();
   };

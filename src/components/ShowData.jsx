@@ -5,74 +5,108 @@ const ShowData = ({ data }) => {
     <section className="row showData">
       <article className="">
         <div>
-          <p>Connection type:</p>
-          <input
-            type="text"
-            className="input"
-            value={data.connection_type}
-            readonly
-          />
+          <p>
+            Connection type:
+            <input
+              type="text"
+              className="input"
+              value={data.connection_type}
+              readonly
+            />
+          </p>
         </div>
         <div>
-          <p>Storage system:</p>
-          <input
-            type="text"
-            className="input"
-            value={data.storage_system}
-            readonly
-          />
+          <p>
+            Storage system:
+            <input
+              type="text"
+              className="input"
+              value={data.storage_system}
+              readonly
+            />
+          </p>
         </div>
         <div>
-          <p>Condition:</p>
-          <input
-            type="text"
-            className="input"
-            value={data.condition}
-            readonly
-          />
+          <p>
+            Condition:
+            <input
+              type="text"
+              className="input"
+              value={data.condition}
+              readonly
+            />
+          </p>
         </div>
         <div>
-          <p>Owner:</p>
-          <input className="input" type="text" value={data.owner} readonly />
+          <p>
+            Owner:
+            <input className="input" type="text" value={data.owner} readonly />
+          </p>
         </div>
         <div>
-          <p>Serial:</p>
-          <input className="input" type="text" value={data.serial} readonly />
+          <p>
+            Serial:
+            <input className="input" type="text" value={data.serial} readonly />
+          </p>
         </div>
         <div>
-          <p>Location:</p>
-          <input className="input" type="text" value={data.location} readonly />
+          <p>
+            Location:
+            <input
+              className="input"
+              type="text"
+              value={data.location}
+              readonly
+            />
+          </p>
         </div>
       </article>
       <article className="">
         <div>
-          <p>Purchase:</p>
-          <input className="input" type="text" value={data.purchase} readonly />
+          <p>
+            Purchase:
+            <input
+              className="input"
+              type="text"
+              value={data.purchase}
+              readonly
+            />
+          </p>
         </div>
         <div>
-          <p>i_max:</p>
-          <input className="input" type="text" value={data.i_max} readonly />
+          <p>
+            i_max:
+            <input className="input" type="text" value={data.i_max} readonly />
+          </p>
         </div>
         <div>
-          <p>i_b:</p>
-          <input className="input" type="text" value={data.i_b} readonly />
+          <p>
+            i_b:
+            <input className="input" type="text" value={data.i_b} readonly />
+          </p>
         </div>
         <div>
-          <p>i_n:</p>
-          <input className="input" type="text" value={data.i_n} readonly />
+          <p>
+            i_n:
+            <input className="input" type="text" value={data.i_n} readonly />
+          </p>
         </div>
         <div>
-          <p>Manufacturer:</p>
-          <input
-            className="input"
-            type="text"
-            value={data.manufacturer}
-            readonly
-          />
+          <p>
+            Manufacturer:
+            <input
+              className="input"
+              type="text"
+              value={data.manufacturer}
+              readonly
+            />
+          </p>
         </div>
         <div>
-          <p>Seals:</p>
-          <input className="input" type="text" value={data.seals} readonly />
+          <p>
+            Seals:
+            <input className="input" type="text" value={data.seals} readonly />
+          </p>
         </div>
       </article>
     </section>
