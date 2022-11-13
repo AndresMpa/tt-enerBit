@@ -31,7 +31,7 @@ const Field = ({ item }) => {
     setpopupData({
       title: "Editing item ",
       target: `${item.serial}`,
-      content: <EditData data={item} />,
+      content: <EditData data={item} handler={togglePopup} />,
     });
     togglePopup();
   };

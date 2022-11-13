@@ -8,8 +8,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 60%;
   margin: 64px auto;
+  width: 60%;
 
   color: #ffffff;
 
@@ -25,12 +25,13 @@
 }
 
 .deleteData--option {
-  margin: auto;
+  justify-content: center;
 }
 
 .deleteData--option__cancel,
 .deleteData--option__delete {
   margin: auto 25px;
+  max-width: 200px;
   width: 100%;
 
   background: none;
